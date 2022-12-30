@@ -49,8 +49,4 @@ func cmpNum(numList : [Int],by closure : (_ n1 : Int,_ n2 : Int) -> Bool){
 cmpNum(numList: numberList) { n1, n2 in
     return n1>n2
 }
-
-//(Int, Int) throws -> Bool 이것은 무엇을 의미할까?
-/*
-    
- */
+//---------------------------------------------------------------------------
