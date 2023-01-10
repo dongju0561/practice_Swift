@@ -50,3 +50,21 @@ cmpNum(numList: numberList) { n1, n2 in
     return n1>n2
 }
 //---------------------------------------------------------------------------
+/*
+ implemention @escaping closure
+ 주로 네트워크 통신을 할때 자주 사용된다고 함(비동기로 실행되는 HTTP Request CompletionHandler)
+ 요약하자면 메인 코드의 흐름에 영향을 받지않고 비동기적으로 수행되어야 할때 사용된다.
+*/
+var closure : ((Int)->Void)? = nil
+
+func createFunc(_ subscribe : @escaping ()->Void){
+    print("func is started")
+    DispatchQueue.main.asyncAfter(deadline: .now()+3){
+        subscribe()
+    }
+    print("func is done")
+}
+createFunc {
+    print("escape!!")
+}
+//---------------------------------------------------------------------------
