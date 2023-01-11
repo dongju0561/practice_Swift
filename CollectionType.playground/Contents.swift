@@ -10,7 +10,7 @@
 import UIKit
 
 
-//array
+//Array
 var array: [Int] = [1,2,3] // Int 타입의 값을 담는 배열 변수 선언
 print(array)
 //print: [1,2,3]
@@ -69,10 +69,46 @@ for (index,value) in array.enumerated(){ // 소괄호 안에 첫번째 변수에
 
 //literal 타입도 배열 요소로 할당할 수 있다.
 
+//Set
+var letters = Set<Character>() // 빈 set 생성
+letters = [] // 빈 set 할당
 
+var stringSet : Set = ["hello","world","dongju"] // 타입 추론 가능
 
+print(stringSet.count)
+print(stringSet.isEmpty)
+letters.insert("h")
 
+if stringSet.remove("hello") != nil{
+    // remove()메소드를 사용하여 만약 해당 set에 삭제하려고 하는 요소가 존재가거나 존재하지 않는 경우를 나누어 동작을 정의하는것을 나눈다.
+    // 만약 특정 요소가 존재하지 않는다면 remove()메소드는 nil을 반환한다.
+    print("remove")
+    print(stringSet)
+}
+else{
+    print("i dont have")
+    
+}
 
+if stringSet.contains("dongju"){ // contain()메소드는 해당 set의 요소에 특정 요소가 존재하는 확인하는 메소드이고 Bool형태으로 값을 반환한다.
+    print("there is it")
+}
+else{
+    print("there isn't it")
+}
+
+let odd: Set = [1,3,5,7,9]
+let even: Set = [2,4,6,8]
+let singleDigitPrimeNumbers: Set = [2, 3, 5, 7]
+
+print(odd.union(even).sorted()) //union = 합집합
+print(odd.intersection(even).sorted()) //intersection = 교집합
+print(odd.subtracting(singleDigitPrimeNumbers).sorted()) //odd에서 odd와 even의 교집합을 뺀  부분
+print(odd.symmetricDifference(singleDigitPrimeNumbers).sorted()) //odd와 even의 합집합을 두 set의 교집합을 뺀 부분
+
+//Dictionay
+let info: [Int:String] = [33: "woojae", 30: "yonghoon", 27: "dongju"]
+print(info[33]) //dictionary key값을 가지고  value 조회 !! optional이 감싸진 상태로 값이 출력된다.
 
 
 
