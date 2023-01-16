@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:">
+      location = "self:/Users/mimidj/Desktop/gitRes/practice_Swift/associatedtype_where.playground">
    </FileRef>
 </Workspace>
