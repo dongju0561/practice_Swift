@@ -1,5 +1,7 @@
 /*
- closure를 이해하기 위해, argumen
+ closure를 이해
+ closure를 사용하는 이유는 함수의 인자로 함수를 사용하기 위해 = 고차함수
+ closure는 비동기 작업에 사용 어떠한 작업을 수행 후 수행해야 할 블록(closure)를 작성할때 사용된다. @escaping
  */
 import UIKit
 
