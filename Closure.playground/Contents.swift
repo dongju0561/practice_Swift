@@ -70,3 +70,15 @@ createFunc {
     print("escape!!")
 }
 //---------------------------------------------------------------------------
+
+/*
+ incline closure
+ method({
+    code
+ })
+ 
+ trailing closure
+ method(){
+    code
+ }
+ */
