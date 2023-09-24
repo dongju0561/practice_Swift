@@ -21,6 +21,7 @@ class Apartment{
         self.unit = unit
     }
     var tenant: Person?
+    
     deinit {
         print("\(unit) is being deinitialized")
     }
@@ -34,6 +35,7 @@ unit4A?.tenant = john
 
 john = nil
 unit4A = nil
+
 
 
 
