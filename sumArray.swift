@@ -8,7 +8,6 @@ func solution(_ sequence:[Int], _ k:Int) -> [Int] {
     var sum = sequence[0]
     
     while(p1 < sequence.count && p2 < sequence.count){
-        print(sum)
         if(sum == k){
             if(p2 - p1 < distance){
                 result = [p1,p2];
