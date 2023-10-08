@@ -40,22 +40,26 @@ enum Weather{
 	case sunny
     case windy(speed: Int)
     case rainy(chance: Int, amount: Int)
+
+    func printWeatherInfo() {
+        switch self {
+            case .sunny:
+                print("맑음")
+            case .windy(let speed):
+                print("바람 \(speed)m/s")
+            case .rainy(let chance, let amount):
+                print("비 \(chance)% \(amount)mm")
+        }
+    }
 }
 
 let yesterdayWeather = Weather.windy(speed: 5)
 let todayWeather = Weather.rainy(chance: 90, amount: 10)
 let tomorrowWeather = Weather.sunny
 
-switch todayWeather {
-    case .sunny:
-        print("맑음")
-    case .windy(let speed):
-        print("바람 \(speed)m/s")
-    case .rainy(let chance, let amount):
-        print("비 \(chance)% \(amount)mm")
-}
-
-
+yesterdayWeather.printWeatherInfo()
+todayWeather.printWeatherInfo()
+tomorrowWeather.printWeatherInfo()
 
 //==================================================
 //case Iterable
