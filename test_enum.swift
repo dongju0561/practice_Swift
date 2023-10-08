@@ -36,19 +36,25 @@ enum Azimuth: String{
 }
 //==================================================
 //associated value
-enum Azimuth {
-    case north(Int)
-    case south(Int)
-    case east(Int)
-    case west(Int)
+enum Weather{
+	case sunny
+    case windy(speed: Int)
+    case rainy(chance: Int, amount: Int)
 }
 
-var north = Azimuth.north(0)
-var south = Azimuth.south(1)
-var east = Azimuth.east(2)
-var west = Azimuth.west(3)
+let yesterdayWeather = Weather.windy(speed: 5)
+let todayWeather = Weather.rainy(chance: 90, amount: 10)
+let tomorrowWeather = Weather.sunny
 
-print(north) // north(0)
+switch todayWeather {
+    case .sunny:
+        print("맑음")
+    case .windy(let speed):
+        print("바람 \(speed)m/s")
+    case .rainy(let chance, let amount):
+        print("비 \(chance)% \(amount)mm")
+}
+
 
 
 //==================================================
